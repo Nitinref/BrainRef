@@ -81,13 +81,7 @@ cd client
 npm install
 npm run dev
 ✨ Future Scope
-📦 Bookmark importing from browsers
-
-🧠 AI-based tag suggestions
-
-🌐 Shareable collections with friends
-
-📱 Mobile version / PWA
+📦 Bookmark importing from browser
 
 👨‍💻 Author
 Made by Nitin
