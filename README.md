@@ -39,19 +39,42 @@ Auth	JWT + Bcrypt
 bash
 Copy
 Edit
-brainref/
-├── client/            # React frontend
+BrainRef/
+├── client/                  # React Frontend
+│   ├── public/
 │   ├── src/
+│   │   ├── assets/
 │   │   ├── components/
+│   │   │   ├── LinkCard.jsx
+│   │   │   └── TagFilter.jsx
 │   │   ├── pages/
-│   │   ├── context/
-│   │   └── App.tsx
-├── server/            # Express backend
-│   ├── routes/
+│   │   │   ├── Home.jsx
+│   │   │   └── AddLink.jsx
+│   │   ├── services/
+│   │   │   └── api.js       # Axios instance
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── .env
+│   ├── package.json
+│   └── vite.config.js
+
+├── server/                  # Node.js Backend
 │   ├── controllers/
+│   │   └── linkController.js
 │   ├── models/
-│   └── index.ts
-⚙️ Setup Instructions
+│   │   └── Link.js
+│   ├── routes/
+│   │   └── linkRoutes.js
+│   ├── config/
+│   │   └── db.js            # MongoDB connection
+│   ├── .env
+│   ├── index.js             # Entry point
+│   ├── package.json
+
+├── README.md
+├── .gitignore
+└── Brain.code-workspace     # (optional VS Code workspace config)
+
 1. Clone the Repository
 bash
 Copy
