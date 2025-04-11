@@ -21,6 +21,9 @@ export function useContent() {
       .then((response) => {
         const data = response.data as { content: Content[] };
         setContents(data.content);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch content:", err);
       });
   }, []);
 
