@@ -48,7 +48,8 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
       {open && (
         <div className="h-screen w-screen bg-slate-500 fixed top-0 left-0 opacity-60 flex justify-center">
           <div className="flex flex-col justify-center">
-            <span className="bg-white opacity-100 p-4 rounded">
+            {/* Changed span to div */}
+            <div className="bg-white opacity-100 p-4 rounded">
               <div className="flex justify-end">
                 <div onClick={onClose} className="cursor-pointer">
                   <CrossIcon />
@@ -83,7 +84,6 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
                   />
                 </div>
               </div>
-
               <div className="flex justify-center">
                 <Button
                   size="md"
@@ -92,7 +92,7 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
                   text="Submit"
                 />
               </div>
-            </span>
+            </div>
           </div>
         </div>
       )}
