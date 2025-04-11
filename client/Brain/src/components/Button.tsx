@@ -1,13 +1,13 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
 interface Buttonprop {
   variant: "primary" | "secondary";
   text: string;
-  size?: "lg" | "sm" | "md"; 
+  size?: "lg" | "sm" | "md";
   startIcon?: ReactElement;
   endIcon?: ReactElement;
   onClick?: () => void;
-  fullWidth?: boolean; 
+  fullWidth?: boolean;
 }
 
 const ButtonSize = {
