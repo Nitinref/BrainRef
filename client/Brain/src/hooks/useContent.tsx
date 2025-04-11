@@ -19,7 +19,8 @@ export function useContent() {
         },
       })
       .then((response) => {
-        setContents((response.data as { content: Content[] }).content);
+        const data = response.data as { content: Content[] };
+        setContents(data.content);
       });
   }, []);
 
