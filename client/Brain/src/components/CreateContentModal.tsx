@@ -31,7 +31,7 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
       {
         link,
         title,
-        type,
+        type: type as "youtube" | "twitter",
       },
       {
         headers: {
@@ -67,9 +67,7 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
                     variant={
                       type === ContentType.Youtube ? "primary" : "secondary"
                     }
-                    onClick={() => {
-                      setType(ContentType.Youtube);
-                    }}
+                    onClick={() => setType(ContentType.Youtube)}
                   />
                   <Button
                     size="md"
@@ -77,13 +75,10 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
                     variant={
                       type === ContentType.Twitter ? "primary" : "secondary"
                     }
-                    onClick={() => {
-                      setType(ContentType.Twitter);
-                    }}
+                    onClick={() => setType(ContentType.Twitter)}
                   />
                 </div>
               </div>
-
               <div className="flex justify-center">
                 <Button
                   size="md"
@@ -99,4 +94,3 @@ export function CreateContentModal({ open, onClose }: CreateContentModalProps) {
     </div>
   );
 }
-
