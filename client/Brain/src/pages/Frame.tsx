@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Brain, ChevronRight, Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 
