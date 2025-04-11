@@ -1,15 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { BACKEND_URL } from "../config";
 import axios from "axios";
 
 interface Content {
   title: string;
   link: string;
-  type: string;
-  // Add other fields as per your backend schema
+  type: "youtube" | "twitter";
 }
 
-export function useContent(): Content[] {
+export function useContent() {
   const [contents, setContents] = useState<Content[]>([]);
 
   useEffect(() => {
@@ -19,12 +18,8 @@ export function useContent(): Content[] {
           Authorization: localStorage.getItem("token") || "",
         },
       })
-      .then((res) => {
-        const data = res.data as { content: Content[] }; // Type assertion
-        setContents(data.content);
-      })
-      .catch((err) => {
-        console.error("Error fetching content:", err);
+      .then((response) => {
+        setContents((response.data as { content: Content[] }).content);
       });
   }, []);
 
